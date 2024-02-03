@@ -1,24 +1,31 @@
-const peeps = ["Josef", "Ian", "Mari"];
-const burtday = "birthday";
+const stringArrayNames = [
+  "Chandler",
+  "Ross",
+  "Joey",
+  "Monica",
+  "Rachel",
+  "Phoebe",
+];
+console.table(stringArrayNames);
+const eventName = "birthday";
 
-function writeCards(people, event) {
-  const emptyArray = [];
-  for (let a = 0; a < people.length; a++) {
-    const b = `Thank you, ${people[a]}, for the wonderful ${event} gift!`;
-    emptyArray.push(b);
-    // debugger;
-  }
-  console.log(emptyArray);
-  return emptyArray;
+function writeCards(stringArrayNames, eventName) {
+  const newArrayOfNames = [];
+  for (let a = 0; a < stringArrayNames.length; a++) {
+    let b =
+      `Thank you, ${stringArrayNames[a]}, for the wonderful ${eventName} gift!`;
+    newArrayOfNames.push(b);
+  };
+  console.table(newArrayOfNames);
+  console.log(newArrayOfNames);
+  return newArrayOfNames;
 }
-writeCards(peeps, burtday);
+writeCards(stringArrayNames, eventName);
 
 
-function countDown(integer) {
-    for (let a = integer; a>=0; a--){
-      console.log(a);
-    }
-    // return(z);
+function countDown(number){
+  for(let q=number; q>=0; q--){
+    console.log(q);
   }
-    countDown(integer);
-  
+}
+countDown(number);
